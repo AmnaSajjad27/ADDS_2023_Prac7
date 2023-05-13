@@ -11,11 +11,16 @@ Autocomplete::Autocomplete()
     rootNode = new Trie();
 }
 
+Autocomplete::~Autocomplete()
+{
+    delete rootNode;
+}
+
 void Autocomplete::transverse(Trie *Node, string partialWord, vector<string>& result)
 {
     if (Node->end_of_word)
     {
-        result.pushback(partialWord);
+        result.push_back(partialWord);
     }
     for (int i = 0; i < 26; i++)
     {
@@ -44,7 +49,7 @@ void Autocomplete::insert(string word)
     Node->end_of_word = true;
 }
 
-vector<string> getSuggestions(string partialWord)
+vector<string> Autocomplete::getSuggestions(string partialWord)
 {
     vector<string> result;
 
