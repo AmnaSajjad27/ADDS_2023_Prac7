@@ -8,6 +8,6 @@
 Trie_prefix::Trie_prefix()
 {
     routerNumber = -1;
-    // Allocate memeory 
+    // Allocate memeory for memory address 
     memset(childern, 0, sizeof(childern));
 }
