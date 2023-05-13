@@ -10,9 +10,12 @@ class Autocomplete
 {
     private:
     Trie* rootNode;
-    void transverse(Trie *Node, std::string partialWord, std::vector<std::string>& result);
+
+    // method to transverse/ helper function
+    void helper_transverse(Trie *Node, std::string partialWord, std::vector<std::string>& result);
 
     public:
+    // constructors 
     Autocomplete();
     ~Autocomplete();
 

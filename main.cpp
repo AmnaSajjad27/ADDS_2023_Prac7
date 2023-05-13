@@ -9,6 +9,9 @@ int main() {
     ac.insert("ant");
     ac.insert("anthoney");
     ac.insert("amna");
+    ac.insert("amalga");
+    ac.insert("olga");
+    ac.insert("orange");
     
     vector<string> res;
     res = ac.getSuggestions("am");
@@ -23,7 +26,7 @@ int main() {
     }
     cout << endl;
     
-    res = ac.getSuggestions("ant");
+    res = ac.getSuggestions("o");
     for (string s : res) {
         cout << s << " ";
     }
